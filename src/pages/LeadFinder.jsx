@@ -3,7 +3,8 @@ import { LeadsContext } from '../context/LeadsContext';
 import { 
   Search, MapPin, Mail, Phone, Download, Save, 
   Brain, Zap, Sparkles, Globe, Users, Briefcase,
-  Filter, X, CheckCircle, AlertCircle, Loader
+  Filter, X, CheckCircle, AlertCircle, Loader,
+  Star  // ⬅️ ADD THIS LINE
 } from 'lucide-react';
 import * as XLSX from 'xlsx';
 import axios from 'axios';
