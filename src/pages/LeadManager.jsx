@@ -2,9 +2,9 @@ import React, { useContext, useState } from 'react';
 import { LeadsContext } from '../context/LeadsContext';
 import {
   Users, Search, Download, Trash2, Edit, Eye,
-  Mail, Phone, Brain, Sparkles, Plus, X,
-  Filter, ChevronDown, CheckCircle, AlertCircle
+  Mail, Phone, Brain, Sparkles, Plus, X
 } from 'lucide-react';
+// ⬇️ REMOVED unused: Filter, ChevronDown, CheckCircle, AlertCircle
 import * as XLSX from 'xlsx';
 
 const LeadManager = () => {
