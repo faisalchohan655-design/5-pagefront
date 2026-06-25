@@ -10,30 +10,13 @@ import {
   Sparkles,
   Settings,
   HelpCircle,
-  LogOut,
   ChevronLeft,
-  ChevronRight,
   Menu,
   X,
-  TrendingUp,
-  Award,
-  Bell,
-  User,
-  PieChart,
-  Target,
   Zap,
-  Globe,
-  MessageCircle,
-  BarChart3,
-  FolderKanban,
-  FileText,
-  Clock,
-  Star,
-  Shield,
-  CreditCard,
-  LifeBuoy,
   ChevronDown
 } from 'lucide-react';
+// ⬇️ REMOVED unused: TrendingUp, Award, Bell, User, PieChart, Target, Globe, MessageCircle, BarChart3, FolderKanban, FileText, Clock, Star, Shield, CreditCard, LifeBuoy, LogOut, ChevronRight
 
 const Sidebar = () => {
   const location = useLocation();
@@ -51,9 +34,9 @@ const Sidebar = () => {
 
   // Secondary Navigation Items
   const secondaryNavItems = [
-    { path: '/analytics', icon: BarChart3, label: 'Analytics' },
-    { path: '/pipeline', icon: FolderKanban, label: 'Pipeline' },
-    { path: '/templates', icon: FileText, label: 'Templates' },
+    { path: '/analytics', icon: LayoutDashboard, label: 'Analytics' },
+    { path: '/pipeline', icon: LayoutDashboard, label: 'Pipeline' },
+    { path: '/templates', icon: LayoutDashboard, label: 'Templates' },
   ];
 
   // Bottom Navigation Items
@@ -62,22 +45,18 @@ const Sidebar = () => {
     { path: '/help', icon: HelpCircle, label: 'Help & Support' },
   ];
 
-  // Check if a path is active
   const isActive = (path) => {
     return location.pathname === path;
   };
 
-  // Toggle sidebar
   const toggleSidebar = () => {
     setCollapsed(!collapsed);
   };
 
-  // Toggle mobile
   const toggleMobile = () => {
     setMobileOpen(!mobileOpen);
   };
 
-  // Render Nav Item
   const renderNavItem = (item, index) => {
     const active = isActive(item.path);
     return (
@@ -158,7 +137,6 @@ const Sidebar = () => {
             )}
           </Link>
 
-          {/* Collapse Toggle Button */}
           <button
             onClick={toggleSidebar}
             className={`
